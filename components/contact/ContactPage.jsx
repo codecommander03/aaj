@@ -73,16 +73,6 @@ const ContactUsPage = () => {
       <section style={{ padding: "40px 20px", textAlign: "center" }}>
         <h2>Logistics Partner for Exponential Growth</h2>
         <p>Trusted by top brands and small businesses alike</p>
-        {/* <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "20px", marginTop: "20px" }}>
-          {brandLogos.map((logo, index) => (
-            <img
-              key={index}
-              src={logo.src}
-              alt={logo.alt}
-              style={{ width: "120px", height: "auto", objectFit: "contain" }}
-            />
-          ))}
-        </div> */}
         <BrandLogos />
       </section>
 
