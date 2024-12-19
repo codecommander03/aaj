@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import { Routes, Route, Link } from 'react-router-dom';
+import ContactPage from '../components/contact/ContactPage'
+import LandingPage from '../components/landingPage/LandingPage'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>Homepage</h1>
+        <nav>
+          <ul>
+            <li><Link to="/page1">Go to Contact Page</Link></li>
+            <li><Link to="/page2">Go to Landing Page</Link></li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/page1" element={<ContactPage />} />
+          <Route path="/page2" element={<LandingPage />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
 export default App
+
+
+// export default App;
+
+
+// import React from 'react';
+// import { Routes, Route, Link } from 'react-router-dom';
+// import ContactPage from '../components/contact/ContactPage'
+// import LandingPage from '../components/landing/LandingPage'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Homepage</h1>
+//       <nav>
+//         <ul>
+//           <li><Link to="/page1">Go to Contact Page</Link></li>
+//           <li><Link to="/page2">Go to Landing Page</Link></li>
+//         </ul>
+//       </nav>
+
+//       <Routes>
+//         <Route path="/page1" element={<ContactPage />} />
+//         <Route path="/page2" element={<LandingPage />} />
+//       </Routes>
+//     </div>
+//   );
+// };
+
+// export default App;

@@ -46,7 +46,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Rest of the sections follow similar pattern - removed for brevity but would include complete implementation */}
       </main>
     </div>
   );
